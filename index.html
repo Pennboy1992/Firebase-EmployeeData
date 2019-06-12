@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Firebase Employee Data</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  
+    <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Firebase Employee Data</title>
+    
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -21,11 +28,11 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Employee Name</th>
-                <th scope="col">Role</th>
-                <th scope="col">Months Worked</th>
-                <th scope="col">Monthly Rate ($)</th>
-                <th scope="col">Total Billed ($)</th>
+                <th scope="col" id="currentEmployeeName">Employee Name</th>
+                <th scope="col" id="currentRole">Role</th>
+                <th scope="col" id="currentMonthsWorked">Months Worked</th>
+                <th scope="col" id="currentMonthlyRate">Monthly Rate ($)</th>
+                <th scope="col" id="currentTotalBilled">Total Billed ($)</th>
               </tr>
             </thead>
         </table>
