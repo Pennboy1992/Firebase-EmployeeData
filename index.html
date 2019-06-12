@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Firebase Employee Data</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+ 
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Firebase Employee Data</title>
+  
+    <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Firebase Employee Data</title>
+    
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -21,11 +33,11 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Employee Name</th>
-                <th scope="col">Role</th>
-                <th scope="col">Months Worked</th>
-                <th scope="col">Monthly Rate ($)</th>
-                <th scope="col">Total Billed ($)</th>
+                <th scope="col" id="currentEmployeeName">Employee Name</th>
+                <th scope="col" id="currentRole">Role</th>
+                <th scope="col" id="currentMonthsWorked">Months Worked</th>
+                <th scope="col" id="currentMonthlyRate">Monthly Rate ($)</th>
+                <th scope="col" id="currentTotalBilled">Total Billed ($)</th>
               </tr>
             </thead>
         </table>
@@ -42,17 +54,28 @@
             <input type="text" class="form-control" id="Role">
         </div>
         <div class="form-group">
+
+            <label for="exampleFormControlSelect2">Start Date</label>
+            <label for="start">Start date: (MM/DD/YYYY)</label> 
+            <br>
+            <input type="date" id="start" name="start-date"
+                value="yyyy-mm-dd"
+                min="1920-01-01" max="2050-01-01">
+
             <label for="startDate">Start Date</label>
             <input type="date" class="form-control" id="startDate">
+
         </div>
-        <div class="form-group">
-            <label for="monthlyRate">Monthly Rate</label>
-            <input type="number" class="form-control" id="monthlyRate">
-        </div>
+        
+        </form>
+    <!-- link to app.js -->
+    <script src="assets/javascript/app.js"></script>
+
     </form>
 </wrapper>
 <button id="submit">Submit</button>
 
 </div>
+
 </body>
 </html>
